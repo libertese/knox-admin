@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="vab-ad">
     <el-carousel v-if="adList" :autoplay="true" :interval="3000" direction="vertical" height="30px" indicator-position="none">
       <el-carousel-item v-for="(item, index) in adList" :key="index">
@@ -7,7 +7,7 @@
       </el-carousel-item>
     </el-carousel>
   </div>
-</template>
+</template> -->
 <script>
   import { getList } from '@/api/ad'
 

@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <span v-if="themeBar">
     <vab-icon :icon="['fas', 'palette']" title="主题配置" @click="handleOpenThemeBar" />
     <div class="theme-bar-setting">
@@ -51,7 +51,7 @@
       </div>
     </el-drawer>
   </span>
-</template>
+</template> -->
 
 <script>
   import { mapActions, mapGetters } from 'vuex'

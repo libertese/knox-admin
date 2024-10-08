@@ -29,7 +29,7 @@ module.exports = [
       if (!accessToken) {
         return {
           code: 500,
-          msg: '帐户或密码不正确。',
+          msg: 'Não autenticado',
         }
       }
       return {

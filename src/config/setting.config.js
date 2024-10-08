@@ -1,70 +1,71 @@
 /**
- * @description 导出默认通用配置
+ * @description Exporta a configuração padrão geral
  */
 const setting = {
-  // 开发以及部署时的URL
+  // URL para desenvolvimento e implantação
   publicPath: '',
-  // 生产环境构建文件的目录名
+  // Nome do diretório dos arquivos construídos para o ambiente de produção
   outputDir: 'dist',
-  // 放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录。
+  // Diretório (relativo a outputDir) onde serão colocados os recursos estáticos gerados (js, css, img, fontes).
   assetsDir: 'static',
-  // 开发环境每次保存时是否输出为eslint编译警告
+  // Se deve exibir avisos do eslint ao salvar no ambiente de desenvolvimento
   lintOnSave: true,
-  // 进行编译的依赖
+  // Dependências que serão compiladas
   transpileDependencies: [],
-  //标题 （包括初次加载雪花屏的标题 页面的标题 浏览器的标题）
-  title: 'Admin Better',
-  //简写
+  // Título (inclui o título da tela de carregamento inicial, o título da página e o título do navegador)
+  title: 'Portal Knox',
+  // Abreviação
   abbreviation: 'vab',
-  //开发环境端口号
+  // Porta do ambiente de desenvolvimento
   devPort: '81',
-  //版本号
+  // Número da versão
   version: process.env.VUE_APP_VERSION,
-  //这一项非常重要！请务必保留MIT协议下package.json及copyright作者信息 即可免费商用，不遵守此项约定你将无法使用该框架，如需自定义版权信息请联系QQ1204505056
+  // Este item é muito importante! Certifique-se de manter o MIT License no package.json e as informações de direitos autorais do autor para uso comercial gratuito. Se não cumprir esta regra, você não poderá usar este framework. Para personalizar as informações de direitos autorais, entre em contato pelo QQ1204505056.
   copyright: 'vab',
-  //是否显示页面底部自定义版权信息
+  // Se deve exibir as informações de direitos autorais personalizadas no rodapé da página
   footerCopyright: true,
-  //是否显示顶部进度条
+  // Se deve exibir a barra de progresso no topo
   progressBar: true,
-  //缓存路由的最大数量
+  // Número máximo de rotas mantidas em cache
   keepAliveMaxNum: 99,
-  // 路由模式，可选值为 history 或 hash
+  // Modo de roteamento, valores possíveis: history ou hash
   routerMode: 'hash',
-  //不经过token校验的路由
+  // Rotas que não requerem verificação de token
   routesWhiteList: ['/login', '/register', '/404', '/401'],
-  //加载时显示文字
-  loadingText: '正在加载中...',
-  //token名称
+  // Texto exibido durante o carregamento
+  loadingText: 'Carregando...',
+  // Nome do token
   tokenName: 'accessToken',
-  //token在localStorage、sessionStorage存储的key的名称
+  // Nome da chave para armazenar o token no localStorage ou sessionStorage
   tokenTableName: 'vue-admin-better-2024',
-  //token存储位置localStorage sessionStorage
+  // Local de armazenamento do token: localStorage ou sessionStorage
   storage: 'localStorage',
-  //token失效回退到登录页时是否记录本次的路由
+  // Se deve registrar a rota atual ao redirecionar para a página de login quando o token expirar
   recordRoute: true,
-  //是否显示logo，不显示时设置false，显示时请填写remixIcon图标名称，暂时只支持设置remixIcon
+  // Se deve exibir o logo. Se não exibir, defina como false. Para exibir, insira o nome do ícone remixIcon; atualmente, apenas remixIcon é suportado.
   logo: 'vuejs-fill',
-  //是否显示在页面高亮错误
+  // Se deve destacar erros na página
   errorLog: ['development', 'production'],
-  //是否开启登录拦截
+  // Se deve ativar a interceptação de login
   loginInterception: true,
-  //是否开启登录RSA加密
+  // Se deve ativar a criptografia RSA no login
   loginRSA: true,
-  //intelligence和all两种方式，前者后端权限只控制permissions不控制view文件的import（前后端配合，减轻后端工作量），all方式完全交给后端前端只负责加载
+  // Modo de autenticação: 'intelligence' (o backend controla apenas permissões e não o import dos arquivos de view, reduzindo a carga do backend) ou 'all' (o backend controla tudo, o frontend apenas carrega)
   authentication: 'intelligence',
-  //vertical布局时是否只保持一个子菜单的展开
+  // Se deve manter apenas um submenu expandido no layout vertical
   uniqueOpened: true,
-  //vertical布局时默认展开的菜单path，使用逗号隔开建议只展开一个
+  // Menu padrão expandido no layout vertical. Use vírgula para separar. Recomenda-se expandir apenas um.
   defaultOopeneds: ['/vab'],
-  //需要加loading层的请求，防止重复提交
+  // Requisições que precisam de uma camada de loading para evitar envios duplicados
   debounce: ['doEdit'],
-  //需要自动注入并加载的模块
+  // Módulos que precisam ser injetados e carregados automaticamente
   providePlugin: {},
-  //代码生成机生成在view下的文件夹名称
+  // Nome da pasta onde o gerador de código cria arquivos dentro da view
   templateFolder: 'project',
-  //是否显示终端donation打印
+  // Se deve exibir a mensagem de doação no terminal
   donation: true,
-  //是否开启图片压缩
+  // Se deve ativar a compressão de imagens
   imageCompression: true,
 }
+
 module.exports = setting

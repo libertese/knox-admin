@@ -5,7 +5,7 @@
   "participants": [],
   "homepage": "https://vuejs-core.cn",
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
     "build": "vue-cli-service build",
     "serve:node20": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
     "build:node20": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",

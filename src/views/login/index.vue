@@ -6,8 +6,7 @@
       </el-col>
       <el-col :lg="8" :md="12" :sm="24" :xl="8" :xs="24">
         <el-form ref="form" class="login-form" label-position="left" :model="form" :rules="rules">
-          <div class="title">hello !</div>
-          <div class="title-tips">欢迎来到{{ title }}！</div>
+          <div class="title">Olá!</div>
           <el-form-item prop="username" style="margin-top: 40px">
             <span class="svg-container svg-container-admin">
               <vab-icon :icon="['fas', 'user']" />
@@ -34,10 +33,10 @@
               <vab-icon :icon="['fas', 'eye']" />
             </span>
           </el-form-item>
-          <el-button class="login-btn" :loading="loading" type="primary" @click="handleLogin">登录</el-button>
-          <router-link to="/register">
+          <el-button class="login-btn" :loading="loading" type="primary" @click="handleLogin">entrar</el-button>
+          <!-- <router-link to="/register">
             <div style="margin-top: 20px">注册</div>
-          </router-link>
+          </router-link> -->
         </el-form>
       </el-col>
     </el-row>

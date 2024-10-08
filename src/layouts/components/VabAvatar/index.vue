@@ -1,8 +1,6 @@
 <template>
   <el-dropdown @command="handleCommand">
     <span class="avatar-dropdown">
-      <!--<el-avatar class="user-avatar" :src="avatar"></el-avatar>-->
-      <img :src="avatar" alt="" class="user-avatar" />
       <div class="user-name">
         {{ username }}
         <i class="el-icon-arrow-down el-icon--right"></i>
@@ -10,12 +8,8 @@
     </span>
 
     <el-dropdown-menu slot="dropdown">
-      <el-dropdown-item command="github">github地址</el-dropdown-item>
-      <el-dropdown-item command="gitee" divided>码云地址</el-dropdown-item>
-      <el-dropdown-item command="pro" divided>pro付费版地址</el-dropdown-item>
-      <el-dropdown-item command="plus" divided>plus付费版地址</el-dropdown-item>
-      <el-dropdown-item command="shop" divided>shop-vite付费版地址</el-dropdown-item>
-      <el-dropdown-item command="logout" divided>退出登录</el-dropdown-item>
+      <!-- <el-dropdown-item command="shop" divided>meu-perfil</el-dropdown-item> -->
+      <el-dropdown-item command="logout" divided>sair</el-dropdown-item>
     </el-dropdown-menu>
   </el-dropdown>
 </template>
@@ -60,7 +54,7 @@
         this.$router.push('/personalCenter/personalCenter')
       },
       logout() {
-        this.$baseConfirm('您确定要退出' + this.$baseTitle + '吗?', null, async () => {
+        this.$baseConfirm('Você deseja sair?', null, async () => {
           await this.$store.dispatch('user/logout')
           if (recordRoute) {
             const fullPath = this.$route.fullPath

@@ -83,7 +83,7 @@ const install = (Vue) => {
 
   /* 全局Alert */
   Vue.prototype.$baseAlert = (content, title, callback) => {
-    MessageBox.alert(content, title || '温馨提示', {
+    MessageBox.alert(content, title || '', {
       confirmButtonText: '确定',
       dangerouslyUseHTMLString: true,
       callback: () => {
@@ -96,9 +96,9 @@ const install = (Vue) => {
 
   /* 全局Confirm */
   Vue.prototype.$baseConfirm = (content, title, callback1, callback2) => {
-    MessageBox.confirm(content, title || '温馨提示', {
-      confirmButtonText: '确定',
-      cancelButtonText: '取消',
+    MessageBox.confirm(content, title || '', {
+      confirmButtonText: 'Sim',
+      cancelButtonText: 'Não',
       closeOnClickModal: false,
       type: 'warning',
     })

@@ -1,16 +1,10 @@
 <template>
   <div v-if="routerView" class="app-main-container">
-    <vab-github-corner />
     <transition mode="out-in" name="fade-transform">
       <keep-alive :include="cachedRoutes" :max="keepAliveMaxNum">
         <router-view :key="key" class="app-main-height" />
       </keep-alive>
     </transition>
-    <footer v-show="footerCopyright" class="footer-copyright">
-      Copyright
-      <vab-icon :icon="['fas', 'copyright']"></vab-icon>
-      vue-admin-better 开源免费版 {{ fullYear }}
-    </footer>
   </div>
 </template>
 
@@ -63,14 +57,14 @@
         this.$nextTick(() => {
           this.routerView = true
         })
-      };
+      }
 
       //重载所有路由
       this.$baseEventBus.$on('reload-router-view', handleReloadRouterView)
 
       this.$once('hook:beforeDestroy', () => {
-        this.$baseEventBus.$off('reload-router-view', handleReloadRouterView);
-      });
+        this.$baseEventBus.$off('reload-router-view', handleReloadRouterView)
+      })
     },
     mounted() {},
     methods: {
