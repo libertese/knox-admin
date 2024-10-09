@@ -6,7 +6,7 @@
   "homepage": "https://vuejs-core.cn",
   "scripts": {
     "serve": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode production vue-cli-service build",
     "serve:node20": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
     "build:node20": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
     "serve:mac": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
@@ -71,7 +71,7 @@
     "prettier": "^2.8.8",
     "sass": "~1.32.13",
     "sass-loader": "^10.1.1",
-    "stylelint": "15.0.0", 
+    "stylelint": "15.0.0",
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-config-recess-order": "^4.1.0",
     "svg-sprite-loader": "^6.0.11",
