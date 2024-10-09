@@ -14,7 +14,7 @@
     "lint": "vue-cli-service lint --fix",
     "lint:eslint": "eslint {src,mock,library}/**/*.{vue,js} --fix",
     "lint:prettier": "prettier {src,mock,library}/**/*.{html,vue,css,sass,scss,js,ts,md} --write",
-    "clear": "rimraf node_modules&&npm install  --registry=--registry=https://registry.npmmirror.com",
+    "clear": "rimraf node_modules&&npm install --legacy-peer-deps  --registry=--registry=https://registry.npmmirror.com",
     "update": "ncu -u --reject vue-echarts,webpack,eslint-plugin-prettier,@vue/eslint-config-prettier,prettier,layouts,sass-loader,sass,screenfull,eslint,chalk,vue,vue-template-compiler,vue-router,vuex,@vue/cli-plugin-babel,@vue/cli-plugin-eslint,@vue/cli-service,eslint-plugin-vue --registry=https://registry.npmmirror.com&&pnpm i",
     "push": "start ./push.sh"
   },
@@ -71,9 +71,9 @@
     "prettier": "^2.8.8",
     "sass": "~1.32.13",
     "sass-loader": "^10.1.1",
-    "stylelint": "^14.x",
-    "stylelint-config-prettier": "^9.0.5",
-    "stylelint-config-recess-order": "^5.1.0",
+    "stylelint": "15.0.0", 
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-recess-order": "^4.1.0",
     "svg-sprite-loader": "^6.0.11",
     "webpack": "4.46.0",
     "webpackbar": "^6.0.1"
